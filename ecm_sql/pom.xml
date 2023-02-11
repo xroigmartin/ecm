@@ -3,4 +3,29 @@
   <groupId>xroigmartin</groupId>
   <artifactId>ecm_sql</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<flyway.user>ecm</flyway.user>
+  	<flyway.password>ecm</flyway.password>
+  	<flyway.schemas>ecm</flyway.schemas>
+  	<flyway.url>jdbc:postgresql://localhost:5432/ecm</flyway.url>
+  </properties>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>9.8.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+    					<artifactId>postgresql</artifactId>
+    					<version>42.5.3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+  
 </project>
