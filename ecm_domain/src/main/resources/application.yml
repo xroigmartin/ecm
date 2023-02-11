@@ -1,0 +1,13 @@
+spring:
+  port: 8080
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecm
+    username: ecm
+    password: ecm
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: false
